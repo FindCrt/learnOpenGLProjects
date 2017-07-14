@@ -15,14 +15,14 @@
 #include <iostream>
 
 const GLchar *vertexShaderSource =
-"#version 400 core                          \n\
+"#version 330 core                          \n\
 layout (location = 0) in vec3 position;     \n\
 void main(){                                \n\
     gl_Position = vec4(position, 1.0f);     \n\
 }                                           \n\
 ";
 const GLchar *fragmentShaderSource =
-"#version 400 core                          \n\
+"#version 330 core                          \n\
 out vec4 color;                             \n\
 void main(){                                \n\
     color = vec4(1.0f, 0.0f, 0.0f, 1.0f);   \n\
@@ -83,7 +83,7 @@ int loadShadersAndLinkProgram(){
 
 void configData(){
     
-    glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
+    //glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
     
     glGenVertexArrays(1, &VAO);
     glBindVertexArray(VAO);
