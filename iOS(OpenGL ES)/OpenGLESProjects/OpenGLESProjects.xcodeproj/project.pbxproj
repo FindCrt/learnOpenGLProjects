@@ -12,8 +12,6 @@
 		DF9968B91F17528500F886FC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF9968B81F17528500F886FC /* ViewController.m */; };
 		DF996A5E1F1758E200F886FC /* TFGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = DF996A5D1F1758E200F886FC /* TFGLView.m */; };
 		DF996A611F175B2100F886FC /* TFTriangleDemoView.mm in Sources */ = {isa = PBXBuildFile; fileRef = DF996A601F175B2100F886FC /* TFTriangleDemoView.mm */; };
-		DF996A631F175C3F00F886FC /* triangle.vs in Resources */ = {isa = PBXBuildFile; fileRef = DF996A621F175C3F00F886FC /* triangle.vs */; };
-		DF996A651F175C4300F886FC /* triangle.fs in Resources */ = {isa = PBXBuildFile; fileRef = DF996A641F175C4300F886FC /* triangle.fs */; };
 		DF996A661F175E9100F886FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF9968BA1F17528500F886FC /* Main.storyboard */; };
 		DF996A671F175E9100F886FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF9968BD1F17528500F886FC /* Assets.xcassets */; };
 		DF996A681F175E9100F886FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF9968BF1F17528500F886FC /* LaunchScreen.storyboard */; };
@@ -310,8 +308,6 @@
 		DF996A5D1F1758E200F886FC /* TFGLView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFGLView.m; sourceTree = "<group>"; };
 		DF996A5F1F175B2100F886FC /* TFTriangleDemoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFTriangleDemoView.h; sourceTree = "<group>"; };
 		DF996A601F175B2100F886FC /* TFTriangleDemoView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = TFTriangleDemoView.mm; sourceTree = "<group>"; };
-		DF996A621F175C3F00F886FC /* triangle.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = triangle.vs; sourceTree = "<group>"; };
-		DF996A641F175C4300F886FC /* triangle.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = triangle.fs; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -328,8 +324,6 @@
 		DF9968B01F17528500F886FC /* Triangle */ = {
 			isa = PBXGroup;
 			children = (
-				DF996A621F175C3F00F886FC /* triangle.vs */,
-				DF996A641F175C4300F886FC /* triangle.fs */,
 				DF996A5F1F175B2100F886FC /* TFTriangleDemoView.h */,
 				DF996A601F175B2100F886FC /* TFTriangleDemoView.mm */,
 				DF9968B41F17528500F886FC /* AppDelegate.h */,
@@ -798,8 +792,6 @@
 				DF996A671F175E9100F886FC /* Assets.xcassets in Resources */,
 				DF996A681F175E9100F886FC /* LaunchScreen.storyboard in Resources */,
 				DF996A691F175E9100F886FC /* Info.plist in Resources */,
-				DF996A651F175C4300F886FC /* triangle.fs in Resources */,
-				DF996A631F175C3F00F886FC /* triangle.vs in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -968,6 +960,7 @@
 				DF9968C51F17528500F886FC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DFF795AB1F17021B00B7E6EC /* Build configuration list for PBXProject "OpenGLESProjects" */ = {
 			isa = XCConfigurationList;
