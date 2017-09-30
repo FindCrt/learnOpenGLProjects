@@ -8,7 +8,7 @@
 
 #define GLEW_STATIC
 #include "glew.h"
-#include "SOIL.h"
+#include <SOIL/SOIL.h>
 #include "glfw3.h"
 
 #include <unistd.h>

@@ -916,6 +916,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/common/libs",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -929,6 +930,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/common/libs",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
