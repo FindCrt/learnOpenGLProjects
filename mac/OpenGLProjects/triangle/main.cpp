@@ -10,31 +10,46 @@
 #include "glew.h"
 #include <SOIL/SOIL.h>
 #include "glfw3.h"
+#include <glm/glm.hpp>
+#include <glm/gtc/matrix_transform.hpp>
 
 #include <unistd.h>
 #include <iostream>
 
-const GLchar *vertexShaderSource =
-"#version 330 core                          \n\
-layout (location = 0) in vec3 position;     \n\
-void main(){                                \n\
-    gl_Position = vec4(position, 1.0f);     \n\
-}                                           \n\
-";
-const GLchar *fragmentShaderSource =
-"#version 330 core                          \n\
-out vec4 color;                             \n\
-void main(){                                \n\
-    color = vec4(1.0f, 0.0f, 0.0f, 1.0f);   \n\
-}                                           \n\
-";
+#include "ConvienceFunc.h"
+
+const GLchar *vertexShaderSource = ShaderString
+(
+version 330 core
+layout (location = 0) in vec3 position;
+void main(){
+    gl_Position = vec4(position, 1.0f);
+}
+);
+
+const GLchar *VSSource_matrix = ShaderString
+(
+ version 330 core
+ layout (location = 0) in vec3 position;
+ uniform mat4 matrix;
+ void main(){
+     gl_Position = matrix * vec4(position, 1.0f);
+ }
+ );
+
+const GLchar *fragmentShaderSource = ShaderString(
+version 330 core
+out vec4 color;
+void main(){
+    color = vec4(1.0f, 0.0f, 0.0f, 1.0f);
+}
+);
 
 GLuint program;
 GLuint VAO;
+GLuint matrixLoc;
 
 int loadShadersAndLinkProgram(){
-    
-    //load and compile shaders
     
     //vertex shader
     GLuint vertexShader = glCreateShader(GL_VERTEX_SHADER);
@@ -78,31 +93,35 @@ int loadShadersAndLinkProgram(){
     glDeleteShader(vertexShader);
     glDeleteShader(fragmentShader);
     
+    matrixLoc = glGetUniformLocation(program, "matrix");
+    
     return 0;
 }
+
+GLfloat vertices[] = standardRectangle;
+GLuint indices[] = standardRectangleIndices;
 
 void configData(){
     
     //glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
     
-    glGenVertexArrays(1, &VAO);
+    glGenBuffers(1, &VAO);
     glBindVertexArray(VAO);
-    
+
     GLuint VBO;
     glGenBuffers(1, &VBO);
     glBindBuffer(GL_ARRAY_BUFFER, VBO);
-    
-    GLfloat vertices[] = {
-        -0.5f, -0.3f, 0.0f,
-        0.5f, -0.3f, 0.0f,
-        0.0f, 0.8f, 0.0f
-    };
-    
     glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
     
-    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 0, 0);
+    GLuint EBO;
+    glGenBuffers(1, &EBO);
+    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);
+    glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(indices), indices, GL_STATIC_DRAW);
+    
+    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(GLfloat), (GLvoid*)0);
     glEnableVertexAttribArray(0);
     
+    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
     glBindBuffer(GL_ARRAY_BUFFER, 0);
     glBindVertexArray(0);
 }
@@ -116,7 +135,7 @@ int main(int argc, const char * argv[]) {
     glfwWindowHint(GLFW_RESIZABLE, GL_FALSE);
     glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
     
-    GLFWwindow *window = glfwCreateWindow(800, 600, "LearnOpenGL", nullptr, nullptr);
+    GLFWwindow *window = glfwCreateWindow(400, 400, "LearnOpenGL", nullptr, nullptr);
     if (!window) {
         std::cout<< "Failed to create GLFW window" <<std::endl;
         return -1;
@@ -142,12 +161,18 @@ int main(int argc, const char * argv[]) {
     while (!glfwWindowShouldClose(window)) {
         glfwPollEvents();
         
-        glClearColor(1.0f, 1.0f, 0.5f, 1.0f);
+        glClearColor(0.2f, 0.8f, 0.5f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT);
         
         glUseProgram(program);
         glBindVertexArray(VAO);
-        glDrawArrays(GL_TRIANGLES, 0, 3);
+        
+        
+//        glm::mat4 rotate = glm::rotate(glm::mat4(1.0), (float)(glfwGetTime()*M_PI), glm::vec3(1.f,0.f,0.f));
+//        glUniformMatrix4fv(matrixLoc, 1, GL_FALSE, &rotate[0][0]);
+        
+        glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
+//        glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
         
         glfwSwapBuffers(window);
     }

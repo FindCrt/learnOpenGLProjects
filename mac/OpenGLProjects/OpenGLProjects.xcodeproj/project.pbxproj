@@ -31,6 +31,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		187B65D020D121F000A39287 /* ConvienceFunc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConvienceFunc.h; sourceTree = "<group>"; };
 		DF9965E61F1728BB00F886FC /* glew.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = glew.h; sourceTree = "<group>"; };
 		DF9965E71F1728BB00F886FC /* glxew.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = glxew.h; sourceTree = "<group>"; };
 		DF9965E81F1728BB00F886FC /* wglew.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = wglew.h; sourceTree = "<group>"; };
@@ -337,11 +338,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		187B65CF20D121AB00A39287 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				187B65D020D121F000A39287 /* ConvienceFunc.h */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
 		DF9965E31F1728BB00F886FC /* common */ = {
 			isa = PBXGroup;
 			children = (
 				DF9965E41F1728BB00F886FC /* headers */,
 				DF9967011F1728BC00F886FC /* libs */,
+				187B65CF20D121AB00A39287 /* Tools */,
 			);
 			name = common;
 			path = ../../common;
