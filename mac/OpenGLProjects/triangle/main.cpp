@@ -53,7 +53,7 @@ int loadShadersAndLinkProgram(){
     
     //vertex shader
     GLuint vertexShader = glCreateShader(GL_VERTEX_SHADER);
-    glShaderSource(vertexShader, 1, &vertexShaderSource, 0);
+    glShaderSource(vertexShader, 1, &VSSource_matrix, 0);
     glCompileShader(vertexShader);
     
     GLint succeed;
@@ -105,7 +105,7 @@ void configData(){
     
     //glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
     
-    glGenBuffers(1, &VAO);
+    glGenVertexArrays(1, &VAO);
     glBindVertexArray(VAO);
 
     GLuint VBO;
@@ -121,7 +121,8 @@ void configData(){
     glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(GLfloat), (GLvoid*)0);
     glEnableVertexAttribArray(0);
     
-    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
+    //不能解绑EBO
+//    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
     glBindBuffer(GL_ARRAY_BUFFER, 0);
     glBindVertexArray(0);
 }
@@ -168,11 +169,16 @@ int main(int argc, const char * argv[]) {
         glBindVertexArray(VAO);
         
         
-//        glm::mat4 rotate = glm::rotate(glm::mat4(1.0), (float)(glfwGetTime()*M_PI), glm::vec3(1.f,0.f,0.f));
-//        glUniformMatrix4fv(matrixLoc, 1, GL_FALSE, &rotate[0][0]);
+        glm::mat4 rotate = glm::rotate(glm::mat4(1.0), (float)(glfwGetTime()*M_PI), glm::vec3(1.f,0.f,0.f));
+        glUniformMatrix4fv(matrixLoc, 1, GL_FALSE, &rotate[0][0]);
         
-        glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
-//        glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
+//        glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
+        glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
+        GLenum err = glGetError(); //GL_INVALID_OPERATION
+        if (err != 0) {
+            printf("error: %d\n",err);
+            break;
+        }
         
         glfwSwapBuffers(window);
     }
