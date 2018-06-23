@@ -12,6 +12,7 @@
 #include <stdio.h>
 #include "glew.h"
 
+
 #define ShaderString(str) "#"#str
 
 #define standardTriangle {-0.5f, -0.4f, 0.0f,   0.5f, -0.4f, 0.0f,   0.0f, 0.45f, 0.0f}
@@ -19,7 +20,8 @@
 #define standardRectangleIndices {0, 1, 3, 0, 3, 2}
 
 #define standardCube {-0.5f, 0.5f, 0.5f,   -0.5f, -0.5f, 0.5f,   0.5f, 0.5f, 0.5f,   0.5f, -0.5f, 0.5f,   -0.5f, 0.5f, -0.5f,   -0.5f, -0.5f, -0.5f,   0.5f, 0.5f, -0.5f,   0.5f, -0.5f, -0.5f}
-#define standardCubeIndices {0,1,2,3, 2,3,7,8, 3,1,8,5, 1,0,5,4, 0,2,4,7, 4,5,7,8}
+#define standardCubeTexcoord {0,0, 0,1, 1,0, 1,1, 0,0, 0,1, 1,0, 1,1}
+#define standardCubeIndices {0,1,2,3, 2,3,6,7, 3,1,7,5, 1,0,5,4, 0,2,4,6, 4,5,6,7}
 
 
 #endif /* ConvienceFunc_h */

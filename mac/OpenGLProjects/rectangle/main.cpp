@@ -85,7 +85,7 @@ int loadShadersAndLinkProgram(){
     return 0;
 }
 
-GLfloat vertices[] = standardTriangle;
+GLfloat vertices[] = standardRectangle;
 
 void configData(){
     
@@ -145,7 +145,7 @@ int main(int argc, const char * argv[]) {
         glUseProgram(program);
         glBindVertexArray(VAO);
         
-        glDrawArrays(GL_TRIANGLES, 0, 3);
+        glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
         GLenum err = glGetError(); //GL_INVALID_OPERATION
         if (err != 0) {
             printf("error: %d\n",err);

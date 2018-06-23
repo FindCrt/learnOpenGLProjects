@@ -4,6 +4,31 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>cube copy.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
+		<key>cube.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+		<key>cube_texture.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
+		<key>rectangle.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+		<key>sphere.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
 		<key>triangle.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -12,6 +37,21 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>18641DE620DE46AB00EF9AB6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>18A9002F20D3AFC500D1FE1E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>18A9005520D3B4DF00D1FE1E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>DFF7959F1F1701D300B7E6EC</key>
 		<dict>
 			<key>primary</key>
