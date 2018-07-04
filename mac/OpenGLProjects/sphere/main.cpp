@@ -49,6 +49,9 @@ GLuint program;
 GLuint VAO;
 GLuint matrixLoc;
 
+int actualSize = 0;
+int fanSize = 0;
+
 int loadShadersAndLinkProgram(){
     
     //vertex shader
@@ -106,13 +109,43 @@ inline void copyVertex(GLfloat *v1, GLfloat *v2){
     }
 }
 
-GLfloat *genSphereVertices(int count, GLfloat radius, int *actualSize){
+#define LogPoint(p) printf("%.2f, %.2f, %.2f,  ",*(p),*(p+1),*(p+2));
+
+void logRectange(GLfloat *start){
+    for (int i = 0; i<4; i++) {
+        LogPoint(start)
+        start += 3;
+    }
+    printf("\n");
+}
+
+GLfloat *genFanVertices(GLfloat angle, GLfloat radius){
+    actualSize = 7;
+    fanSize = actualSize;
+    GLfloat *vertices = new GLfloat[actualSize*3];
+    
+    vertices[0] = 0;
+    vertices[1] = 0;
+    vertices[2] = 0;
+    
+    GLfloat angleStep = angle/(actualSize-2);
+    int index = 3;
+    for (int i = 0; i<actualSize-1; i++) {
+        vertices[index++] = cos(angleStep*i)*radius;
+        vertices[index++] = sin(angleStep*i)*radius;
+        vertices[index++] = 0;
+    }
+    
+    return vertices;
+}
+
+GLfloat *genSphereVertices(int count, GLfloat radius){
     int row = sqrtf(count);
     int column = count/row;
     
-    *actualSize = (row-1)*(column-1)*4;
-    GLfloat *vertices = new GLfloat[*actualSize*3];
-    
+    fanSize = column+1;
+    actualSize = (row-1)*column*2+ 2*(fanSize);
+    GLfloat *vertices = new GLfloat[actualSize*3];
     GLfloat pureVertices[row][column*3];
     
     //原始的每个定，不重复也不缺少
@@ -134,24 +167,41 @@ GLfloat *genSphereVertices(int count, GLfloat radius, int *actualSize){
         }
     }
     
+    //顶部和底部使用扇叶图元
+    GLfloat top[3] = {0, 0, radius};
+    GLfloat bottom[3] = {0, 0, -radius};
+    
+    GLfloat *curVertex = vertices;
+    copyVertex(curVertex, top);
+    curVertex += 3;
+    for (int i = 0; i<column; i++) {
+        copyVertex(curVertex, pureVertices[row-1]+i*3);  //pureVertices计算是从下往上的
+        curVertex += 3;
+    }
+    
+    copyVertex(curVertex, bottom);
+    curVertex += 3;
+    for (int i = 0; i<column; i++) {
+        copyVertex(curVertex, pureVertices[0]+i*3);
+        curVertex += 3;
+    }
+    
     //为了使用GL_TRIANGLE_STRIP绘制四边形，重新排列顶点，会有一部分顶点重复
-    int index = 0;
+    
     for (int i = 0; i<row-1; i++) {
         GLfloat *row1 = pureVertices[i];
         GLfloat *row2 = pureVertices[i+1];
         
-        for (int j = 0; j<column-1; j++) {
-            copyVertex(vertices+index++, row1+j);
-            copyVertex(vertices+index++, row2+j);
-            copyVertex(vertices+index++, row1+j+1);
-            copyVertex(vertices+index++, row2+j+1);
+        for (int j = 0; j<column; j++) {
+            copyVertex(curVertex, row1+j*3);
+            curVertex += 3;
+            copyVertex(curVertex, row2+j*3);
+            curVertex += 3;
         }
     }
     
     return vertices;
 }
-
-int actualSize = 0;
 
 void configData(){
     
@@ -160,16 +210,13 @@ void configData(){
     glGenVertexArrays(1, &VAO);
     glBindVertexArray(VAO);
     
-    GLfloat *vertices = genSphereVertices(100, 0.8f, &actualSize);
-    for (int i = 0; i<20; i++) {
-        printf("%.1f, %.1f, %.1f\n",vertices[3*i],vertices[3*i+1],vertices[3*i+2]);
-    }
-//    GLfloat vertices[] = standardRectangle;
+    GLfloat *vertices = genSphereVertices(625, 0.75);
+//    GLfloat *vertices = genFanVertices(2.34, 1);
 
     GLuint VBO;
     glGenBuffers(1, &VBO);
     glBindBuffer(GL_ARRAY_BUFFER, VBO);
-    glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
+    glBufferData(GL_ARRAY_BUFFER, sizeof(GLfloat)*actualSize*3, vertices, GL_STATIC_DRAW);
     
     glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(GLfloat), (GLvoid*)0);
     glEnableVertexAttribArray(0);
@@ -223,10 +270,13 @@ int main(int argc, const char * argv[]) {
         
         
         glm::mat4 rotate = glm::rotate(glm::mat4(1.0), (float)(glfwGetTime()*M_PI/6.0f), glm::vec3(1.f,0.f,0.f));
+        rotate = glm::rotate(glm::mat4(1.0), (float)(glfwGetTime()*M_PI/20.0f), glm::vec3(0.0f, 0.0f, 1.f));
 //        glm::mat4 rotate = glm::mat4(1.0);
         glUniformMatrix4fv(matrixLoc, 1, GL_FALSE, &rotate[0][0]);
         
-        glDrawArrays(GL_TRIANGLE_STRIP, 0, actualSize);
+        glDrawArrays(GL_TRIANGLE_FAN, 0, fanSize);
+        glDrawArrays(GL_TRIANGLE_STRIP, fanSize*2, actualSize-2*fanSize);
+        glDrawArrays(GL_TRIANGLE_FAN, fanSize, fanSize);
         GLenum err = glGetError(); //GL_INVALID_OPERATION
         if (err != 0) {
             printf("error: %d\n",err);
