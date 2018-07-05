@@ -17,6 +17,11 @@
 		<key>cube_texture.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
+			<integer>5</integer>
+		</dict>
+		<key>multiObject.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
 			<integer>4</integer>
 		</dict>
 		<key>rectangle.xcscheme</key>
@@ -37,6 +42,11 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>18607E7620ECC6D800B83FC6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>18641DE620DE46AB00EF9AB6</key>
 		<dict>
 			<key>primary</key>

@@ -270,7 +270,7 @@ int main(int argc, const char * argv[]) {
         
         
         glm::mat4 rotate = glm::rotate(glm::mat4(1.0), (float)(glfwGetTime()*M_PI/6.0f), glm::vec3(1.f,0.f,0.f));
-        rotate = glm::rotate(glm::mat4(1.0), (float)(glfwGetTime()*M_PI/20.0f), glm::vec3(0.0f, 0.0f, 1.f));
+        rotate = glm::rotate(rotate, (float)(glfwGetTime()*M_PI/20.0f), glm::vec3(0.f, 1.f, 0.f));
 //        glm::mat4 rotate = glm::mat4(1.0);
         glUniformMatrix4fv(matrixLoc, 1, GL_FALSE, &rotate[0][0]);
         
