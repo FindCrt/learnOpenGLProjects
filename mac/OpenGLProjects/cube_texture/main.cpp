@@ -16,35 +16,47 @@
 #include <unistd.h>
 #include <iostream>
 
-
 #include "ConvienceFunc.h"
 
-const GLchar *vertexShaderSource = ShaderString
+static std::string ResourcePath = "/Users/apple/myGit/learnOpenGLProjects/Resource/";
+
+const GLchar *VSSource_matrix = ShaderString
+(
+ version 330 core
+ layout (location = 0) in vec3 position;
+ layout (location = 1) in vec2 inTexcoord;
+ out vec2 texcoord;
+ uniform mat4 matrix;
+ 
+ void main(){
+     gl_Position = matrix * vec4(position, 1.0f);
+     texcoord = inTexcoord;
+ }
+ );
+
+const GLchar *fragmentShaderSource = ShaderString
 (
 version 330 core
-layout (location = 0) in vec3 position;
-void main(){
-    gl_Position = vec4(position, 1.0f);
-}
-);
-
-const GLchar *fragmentShaderSource = ShaderString(
-version 330 core
 out vec4 color;
+in vec2 texcoord;
+uniform sampler2D tex;
 void main(){
-    color = vec4(1.0f, 0.0f, 0.0f, 1.0f);
+    color = texture(tex, texcoord);
 }
 );
-
 
 GLuint program;
 GLuint VAO;
+GLuint matrixLoc;
+
+GLuint texLoc;
+GLuint mainTexture;
 
 int loadShadersAndLinkProgram(){
     
     //vertex shader
     GLuint vertexShader = glCreateShader(GL_VERTEX_SHADER);
-    glShaderSource(vertexShader, 1, &vertexShaderSource, 0);
+    glShaderSource(vertexShader, 1, &VSSource_matrix, 0);
     glCompileShader(vertexShader);
     
     GLint succeed;
@@ -84,12 +96,19 @@ int loadShadersAndLinkProgram(){
     glDeleteShader(vertexShader);
     glDeleteShader(fragmentShader);
     
+    matrixLoc = glGetUniformLocation(program, "matrix");
+    texLoc = glGetUniformLocation(program, "tex");
+    
     return 0;
 }
 
-GLfloat vertices[] = standardTriangle;
+GLfloat vertices[] = standardCube;
+GLfloat texcoord[] = standardCubeTexcoord;
+GLuint indices[] = standardCubeIndices;
 
 void configData(){
+    
+//    glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
     
     glGenVertexArrays(1, &VAO);
     glBindVertexArray(VAO);
@@ -98,12 +117,45 @@ void configData(){
     glGenBuffers(1, &VBO);
     glBindBuffer(GL_ARRAY_BUFFER, VBO);
     glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
-    
     glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(GLfloat), (GLvoid*)0);
     glEnableVertexAttribArray(0);
     
+    GLuint VBO2;
+    glGenBuffers(1, &VBO2);
+    glBindBuffer(GL_ARRAY_BUFFER, VBO2);
+    glBufferData(GL_ARRAY_BUFFER, sizeof(texcoord), texcoord, GL_STATIC_DRAW);
+    glVertexAttribPointer(1, 2, GL_FLOAT, GL_FALSE, 2 * sizeof(GLfloat), (GLvoid*)0);
+    glEnableVertexAttribArray(1);
+    
+    //同一个点，在不同面上时，纹理坐标可以是不同的，这一点和EBO是冲突的，还有之后考虑光照是的法线也会这样。
+    GLuint EBO;
+    glGenBuffers(1, &EBO);
+    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);
+    glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(indices), indices, GL_STATIC_DRAW);
+    
+    
+    
+    //不能解绑EBO
+//    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
     glBindBuffer(GL_ARRAY_BUFFER, 0);
     glBindVertexArray(0);
+}
+
+void configTexture(){
+    glGenTextures(1, &mainTexture);
+    glBindTexture(GL_TEXTURE_2D, mainTexture);
+    
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_MIRRORED_REPEAT);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_MIRRORED_REPEAT);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+    
+    int width, height;
+    auto pixels = SOIL_load_image((ResourcePath+"fish.jpeg").c_str(), &width, &height, 0, SOIL_LOAD_RGBA);
+    
+    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, width, height, 0, GL_RGBA, GL_UNSIGNED_BYTE, pixels);
+    glGenerateMipmap(GL_TEXTURE_2D);
+    glBindTexture(GL_TEXTURE_2D, 0);
 }
 
 int main(int argc, const char * argv[]) {
@@ -137,6 +189,7 @@ int main(int argc, const char * argv[]) {
         return -1;
     }
     configData();
+    configTexture();
     
     while (!glfwWindowShouldClose(window)) {
         glfwPollEvents();
@@ -147,7 +200,15 @@ int main(int argc, const char * argv[]) {
         glUseProgram(program);
         glBindVertexArray(VAO);
         
-        glDrawArrays(GL_TRIANGLES, 0, 3);
+        glActiveTexture(GL_TEXTURE0);
+        glBindTexture(GL_TEXTURE_2D, mainTexture);
+        glUniform1i(texLoc, 0);
+        
+        glm::mat4 rotate = glm::rotate(glm::mat4(1.0), (float)(glfwGetTime()*M_PI/6.0f), glm::vec3(1.f,0.f,0.f));
+        glUniformMatrix4fv(matrixLoc, 1, GL_FALSE, &rotate[0][0]);
+        
+//        glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
+        glDrawElements(GL_TRIANGLE_STRIP, 24, GL_UNSIGNED_INT, 0);
         GLenum err = glGetError(); //GL_INVALID_OPERATION
         if (err != 0) {
             printf("error: %d\n",err);

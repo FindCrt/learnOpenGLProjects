@@ -7,6 +7,53 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18149C4C20DE4862001F014C /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 18641DF820DE46EF00EF9AB6 /* main.cpp */; };
+		18607E7A20ECC6D800B83FC6 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF99670C1F1729AF00F886FC /* IOKit.framework */; };
+		18607E7B20ECC6D800B83FC6 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF99670A1F17299D00F886FC /* CoreVideo.framework */; };
+		18607E7C20ECC6D800B83FC6 /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = DF9967081F17297F00F886FC /* libstdc++.tbd */; };
+		18607E7D20ECC6D800B83FC6 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFF795DF1F1721BB00B7E6EC /* OpenGL.framework */; };
+		18607E7E20ECC6D800B83FC6 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFF795D51F1714BE00B7E6EC /* Cocoa.framework */; };
+		18607E7F20ECC6D800B83FC6 /* libSOIL.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DF9967041F1728BC00F886FC /* libSOIL.a */; };
+		18607E8020ECC6D800B83FC6 /* libglfw3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DF9967031F1728BC00F886FC /* libglfw3.a */; };
+		18607E8120ECC6D800B83FC6 /* libGLEW.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DF9967021F1728BC00F886FC /* libGLEW.a */; };
+		18607E8920ECC74700B83FC6 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 18607E8820ECC73900B83FC6 /* main.cpp */; };
+		18607E8C20ECC79000B83FC6 /* TFGeoObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 18607E8A20ECC79000B83FC6 /* TFGeoObject.cpp */; };
+		18607E8F20ECC9FC00B83FC6 /* TFSphere.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 18607E8D20ECC9FC00B83FC6 /* TFSphere.cpp */; };
+		18641DEA20DE46AB00EF9AB6 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF99670C1F1729AF00F886FC /* IOKit.framework */; };
+		18641DEB20DE46AB00EF9AB6 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF99670A1F17299D00F886FC /* CoreVideo.framework */; };
+		18641DEC20DE46AB00EF9AB6 /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = DF9967081F17297F00F886FC /* libstdc++.tbd */; };
+		18641DED20DE46AB00EF9AB6 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFF795DF1F1721BB00B7E6EC /* OpenGL.framework */; };
+		18641DEE20DE46AB00EF9AB6 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFF795D51F1714BE00B7E6EC /* Cocoa.framework */; };
+		18641DEF20DE46AC00EF9AB6 /* libSOIL.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DF9967041F1728BC00F886FC /* libSOIL.a */; };
+		18641DF020DE46AC00EF9AB6 /* libglfw3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DF9967031F1728BC00F886FC /* libglfw3.a */; };
+		18641DF120DE46AC00EF9AB6 /* libGLEW.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DF9967021F1728BC00F886FC /* libGLEW.a */; };
+		18A9003320D3AFC500D1FE1E /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF99670C1F1729AF00F886FC /* IOKit.framework */; };
+		18A9003420D3AFC500D1FE1E /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF99670A1F17299D00F886FC /* CoreVideo.framework */; };
+		18A9003520D3AFC500D1FE1E /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = DF9967081F17297F00F886FC /* libstdc++.tbd */; };
+		18A9003620D3AFC500D1FE1E /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFF795DF1F1721BB00B7E6EC /* OpenGL.framework */; };
+		18A9003720D3AFC500D1FE1E /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFF795D51F1714BE00B7E6EC /* Cocoa.framework */; };
+		18A9003820D3AFC500D1FE1E /* libSOIL.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DF9967041F1728BC00F886FC /* libSOIL.a */; };
+		18A9003920D3AFC500D1FE1E /* libglfw3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DF9967031F1728BC00F886FC /* libglfw3.a */; };
+		18A9003A20D3AFC500D1FE1E /* libGLEW.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DF9967021F1728BC00F886FC /* libGLEW.a */; };
+		18A9004220D3B08700D1FE1E /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 18A9004120D3B06D00D1FE1E /* main.cpp */; };
+		18A9005920D3B4DF00D1FE1E /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF99670C1F1729AF00F886FC /* IOKit.framework */; };
+		18A9005A20D3B4DF00D1FE1E /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF99670A1F17299D00F886FC /* CoreVideo.framework */; };
+		18A9005B20D3B4DF00D1FE1E /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = DF9967081F17297F00F886FC /* libstdc++.tbd */; };
+		18A9005C20D3B4DF00D1FE1E /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFF795DF1F1721BB00B7E6EC /* OpenGL.framework */; };
+		18A9005D20D3B4DF00D1FE1E /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFF795D51F1714BE00B7E6EC /* Cocoa.framework */; };
+		18A9005E20D3B4DF00D1FE1E /* libSOIL.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DF9967041F1728BC00F886FC /* libSOIL.a */; };
+		18A9005F20D3B4DF00D1FE1E /* libglfw3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DF9967031F1728BC00F886FC /* libglfw3.a */; };
+		18A9006020D3B4DF00D1FE1E /* libGLEW.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DF9967021F1728BC00F886FC /* libGLEW.a */; };
+		18A9006620D3B4F000D1FE1E /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 18A9004F20D3B11400D1FE1E /* main.cpp */; };
+		18A9006B20D3B59600D1FE1E /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF99670C1F1729AF00F886FC /* IOKit.framework */; };
+		18A9006C20D3B59600D1FE1E /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF99670A1F17299D00F886FC /* CoreVideo.framework */; };
+		18A9006D20D3B59600D1FE1E /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = DF9967081F17297F00F886FC /* libstdc++.tbd */; };
+		18A9006E20D3B59600D1FE1E /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFF795DF1F1721BB00B7E6EC /* OpenGL.framework */; };
+		18A9006F20D3B59600D1FE1E /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFF795D51F1714BE00B7E6EC /* Cocoa.framework */; };
+		18A9007020D3B59600D1FE1E /* libSOIL.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DF9967041F1728BC00F886FC /* libSOIL.a */; };
+		18A9007120D3B59600D1FE1E /* libglfw3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DF9967031F1728BC00F886FC /* libglfw3.a */; };
+		18A9007220D3B59600D1FE1E /* libGLEW.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DF9967021F1728BC00F886FC /* libGLEW.a */; };
+		18A9007A20D3B6B100D1FE1E /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 18A9007920D3B68200D1FE1E /* main.cpp */; };
 		DF9967051F17296B00F886FC /* libGLEW.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DF9967021F1728BC00F886FC /* libGLEW.a */; };
 		DF9967061F17296D00F886FC /* libglfw3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DF9967031F1728BC00F886FC /* libglfw3.a */; };
 		DF9967071F17297000F886FC /* libSOIL.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DF9967041F1728BC00F886FC /* libSOIL.a */; };
@@ -19,6 +66,51 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		18607E8220ECC6D800B83FC6 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		18641DF220DE46AC00EF9AB6 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		18A9003B20D3AFC500D1FE1E /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		18A9006120D3B4DF00D1FE1E /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		18A9007320D3B59600D1FE1E /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
 		DFF7959E1F1701D300B7E6EC /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -31,6 +123,25 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		18607E8620ECC6D800B83FC6 /* multiObject */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = multiObject; sourceTree = BUILT_PRODUCTS_DIR; };
+		18607E8820ECC73900B83FC6 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		18607E8A20ECC79000B83FC6 /* TFGeoObject.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = TFGeoObject.cpp; sourceTree = "<group>"; };
+		18607E8B20ECC79000B83FC6 /* TFGeoObject.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = TFGeoObject.hpp; sourceTree = "<group>"; };
+		18607E8D20ECC9FC00B83FC6 /* TFSphere.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = TFSphere.cpp; sourceTree = "<group>"; };
+		18607E8E20ECC9FC00B83FC6 /* TFSphere.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = TFSphere.hpp; sourceTree = "<group>"; };
+		18641DE120DE33AB00EF9AB6 /* cheetah.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cheetah.jpg; sourceTree = "<group>"; };
+		18641DE220DE33AB00EF9AB6 /* Cosmos09.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Cosmos09.jpg; sourceTree = "<group>"; };
+		18641DE320DE33AB00EF9AB6 /* water.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = water.jpg; sourceTree = "<group>"; };
+		18641DE420DE3C6800EF9AB6 /* fish.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fish.jpeg; sourceTree = "<group>"; };
+		18641DF620DE46AC00EF9AB6 /* sphere */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = sphere; sourceTree = BUILT_PRODUCTS_DIR; };
+		18641DF820DE46EF00EF9AB6 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		187B65D020D121F000A39287 /* ConvienceFunc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConvienceFunc.h; sourceTree = "<group>"; };
+		18A9003F20D3AFC500D1FE1E /* rectangle */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = rectangle; sourceTree = BUILT_PRODUCTS_DIR; };
+		18A9004120D3B06D00D1FE1E /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		18A9004F20D3B11400D1FE1E /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		18A9006520D3B4DF00D1FE1E /* cube */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = cube; sourceTree = BUILT_PRODUCTS_DIR; };
+		18A9007720D3B59600D1FE1E /* cube_texture */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = cube_texture; sourceTree = BUILT_PRODUCTS_DIR; };
+		18A9007920D3B68200D1FE1E /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		DF9965E61F1728BB00F886FC /* glew.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = glew.h; sourceTree = "<group>"; };
 		DF9965E71F1728BB00F886FC /* glxew.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = glxew.h; sourceTree = "<group>"; };
 		DF9965E81F1728BB00F886FC /* wglew.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = wglew.h; sourceTree = "<group>"; };
@@ -319,6 +430,81 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		18607E7920ECC6D800B83FC6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18607E7A20ECC6D800B83FC6 /* IOKit.framework in Frameworks */,
+				18607E7B20ECC6D800B83FC6 /* CoreVideo.framework in Frameworks */,
+				18607E7C20ECC6D800B83FC6 /* libstdc++.tbd in Frameworks */,
+				18607E7D20ECC6D800B83FC6 /* OpenGL.framework in Frameworks */,
+				18607E7E20ECC6D800B83FC6 /* Cocoa.framework in Frameworks */,
+				18607E7F20ECC6D800B83FC6 /* libSOIL.a in Frameworks */,
+				18607E8020ECC6D800B83FC6 /* libglfw3.a in Frameworks */,
+				18607E8120ECC6D800B83FC6 /* libGLEW.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18641DE920DE46AB00EF9AB6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18641DEA20DE46AB00EF9AB6 /* IOKit.framework in Frameworks */,
+				18641DEB20DE46AB00EF9AB6 /* CoreVideo.framework in Frameworks */,
+				18641DEC20DE46AB00EF9AB6 /* libstdc++.tbd in Frameworks */,
+				18641DED20DE46AB00EF9AB6 /* OpenGL.framework in Frameworks */,
+				18641DEE20DE46AB00EF9AB6 /* Cocoa.framework in Frameworks */,
+				18641DEF20DE46AC00EF9AB6 /* libSOIL.a in Frameworks */,
+				18641DF020DE46AC00EF9AB6 /* libglfw3.a in Frameworks */,
+				18641DF120DE46AC00EF9AB6 /* libGLEW.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18A9003220D3AFC500D1FE1E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18A9003320D3AFC500D1FE1E /* IOKit.framework in Frameworks */,
+				18A9003420D3AFC500D1FE1E /* CoreVideo.framework in Frameworks */,
+				18A9003520D3AFC500D1FE1E /* libstdc++.tbd in Frameworks */,
+				18A9003620D3AFC500D1FE1E /* OpenGL.framework in Frameworks */,
+				18A9003720D3AFC500D1FE1E /* Cocoa.framework in Frameworks */,
+				18A9003820D3AFC500D1FE1E /* libSOIL.a in Frameworks */,
+				18A9003920D3AFC500D1FE1E /* libglfw3.a in Frameworks */,
+				18A9003A20D3AFC500D1FE1E /* libGLEW.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18A9005820D3B4DF00D1FE1E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18A9005920D3B4DF00D1FE1E /* IOKit.framework in Frameworks */,
+				18A9005A20D3B4DF00D1FE1E /* CoreVideo.framework in Frameworks */,
+				18A9005B20D3B4DF00D1FE1E /* libstdc++.tbd in Frameworks */,
+				18A9005C20D3B4DF00D1FE1E /* OpenGL.framework in Frameworks */,
+				18A9005D20D3B4DF00D1FE1E /* Cocoa.framework in Frameworks */,
+				18A9005E20D3B4DF00D1FE1E /* libSOIL.a in Frameworks */,
+				18A9005F20D3B4DF00D1FE1E /* libglfw3.a in Frameworks */,
+				18A9006020D3B4DF00D1FE1E /* libGLEW.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18A9006A20D3B59600D1FE1E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18A9006B20D3B59600D1FE1E /* IOKit.framework in Frameworks */,
+				18A9006C20D3B59600D1FE1E /* CoreVideo.framework in Frameworks */,
+				18A9006D20D3B59600D1FE1E /* libstdc++.tbd in Frameworks */,
+				18A9006E20D3B59600D1FE1E /* OpenGL.framework in Frameworks */,
+				18A9006F20D3B59600D1FE1E /* Cocoa.framework in Frameworks */,
+				18A9007020D3B59600D1FE1E /* libSOIL.a in Frameworks */,
+				18A9007120D3B59600D1FE1E /* libglfw3.a in Frameworks */,
+				18A9007220D3B59600D1FE1E /* libGLEW.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DFF7959D1F1701D300B7E6EC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -337,6 +523,70 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		18607E8720ECC73900B83FC6 /* multiObject */ = {
+			isa = PBXGroup;
+			children = (
+				18607E8820ECC73900B83FC6 /* main.cpp */,
+				18607E8A20ECC79000B83FC6 /* TFGeoObject.cpp */,
+				18607E8B20ECC79000B83FC6 /* TFGeoObject.hpp */,
+				18607E8D20ECC9FC00B83FC6 /* TFSphere.cpp */,
+				18607E8E20ECC9FC00B83FC6 /* TFSphere.hpp */,
+			);
+			path = multiObject;
+			sourceTree = "<group>";
+		};
+		18641DE020DE33AB00EF9AB6 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				18641DE420DE3C6800EF9AB6 /* fish.jpeg */,
+				18641DE120DE33AB00EF9AB6 /* cheetah.jpg */,
+				18641DE220DE33AB00EF9AB6 /* Cosmos09.jpg */,
+				18641DE320DE33AB00EF9AB6 /* water.jpg */,
+			);
+			name = Resource;
+			path = ../../Resource;
+			sourceTree = "<group>";
+		};
+		18641DF720DE46EF00EF9AB6 /* sphere */ = {
+			isa = PBXGroup;
+			children = (
+				18641DF820DE46EF00EF9AB6 /* main.cpp */,
+			);
+			path = sphere;
+			sourceTree = "<group>";
+		};
+		187B65CF20D121AB00A39287 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				187B65D020D121F000A39287 /* ConvienceFunc.h */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		18A9004020D3B06D00D1FE1E /* rectangle */ = {
+			isa = PBXGroup;
+			children = (
+				18A9004120D3B06D00D1FE1E /* main.cpp */,
+			);
+			path = rectangle;
+			sourceTree = "<group>";
+		};
+		18A9004E20D3B11400D1FE1E /* cube */ = {
+			isa = PBXGroup;
+			children = (
+				18A9004F20D3B11400D1FE1E /* main.cpp */,
+			);
+			path = cube;
+			sourceTree = "<group>";
+		};
+		18A9007820D3B68200D1FE1E /* cube_texture */ = {
+			isa = PBXGroup;
+			children = (
+				18A9007920D3B68200D1FE1E /* main.cpp */,
+			);
+			path = cube_texture;
+			sourceTree = "<group>";
+		};
 		DF9965E31F1728BB00F886FC /* common */ = {
 			isa = PBXGroup;
 			children = (
@@ -714,8 +964,15 @@
 		DFF795891F1701B400B7E6EC = {
 			isa = PBXGroup;
 			children = (
+				187B65CF20D121AB00A39287 /* Tools */,
 				DF9965E31F1728BB00F886FC /* common */,
+				18641DE020DE33AB00EF9AB6 /* Resource */,
 				DFF795A11F1701D300B7E6EC /* triangle */,
+				18A9004020D3B06D00D1FE1E /* rectangle */,
+				18A9004E20D3B11400D1FE1E /* cube */,
+				18A9007820D3B68200D1FE1E /* cube_texture */,
+				18641DF720DE46EF00EF9AB6 /* sphere */,
+				18607E8720ECC73900B83FC6 /* multiObject */,
 				DFF795931F1701B400B7E6EC /* Products */,
 				DFF795D41F1714BE00B7E6EC /* Frameworks */,
 			);
@@ -725,6 +982,11 @@
 			isa = PBXGroup;
 			children = (
 				DFF795A01F1701D300B7E6EC /* triangle */,
+				18A9003F20D3AFC500D1FE1E /* rectangle */,
+				18A9006520D3B4DF00D1FE1E /* cube */,
+				18A9007720D3B59600D1FE1E /* cube_texture */,
+				18641DF620DE46AC00EF9AB6 /* sphere */,
+				18607E8620ECC6D800B83FC6 /* multiObject */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -752,6 +1014,91 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		18607E7620ECC6D800B83FC6 /* multiObject */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 18607E8320ECC6D800B83FC6 /* Build configuration list for PBXNativeTarget "multiObject" */;
+			buildPhases = (
+				18607E7720ECC6D800B83FC6 /* Sources */,
+				18607E7920ECC6D800B83FC6 /* Frameworks */,
+				18607E8220ECC6D800B83FC6 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = multiObject;
+			productName = triangle;
+			productReference = 18607E8620ECC6D800B83FC6 /* multiObject */;
+			productType = "com.apple.product-type.tool";
+		};
+		18641DE620DE46AB00EF9AB6 /* sphere */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 18641DF320DE46AC00EF9AB6 /* Build configuration list for PBXNativeTarget "sphere" */;
+			buildPhases = (
+				18641DE720DE46AB00EF9AB6 /* Sources */,
+				18641DE920DE46AB00EF9AB6 /* Frameworks */,
+				18641DF220DE46AC00EF9AB6 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = sphere;
+			productName = triangle;
+			productReference = 18641DF620DE46AC00EF9AB6 /* sphere */;
+			productType = "com.apple.product-type.tool";
+		};
+		18A9002F20D3AFC500D1FE1E /* rectangle */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 18A9003C20D3AFC500D1FE1E /* Build configuration list for PBXNativeTarget "rectangle" */;
+			buildPhases = (
+				18A9003020D3AFC500D1FE1E /* Sources */,
+				18A9003220D3AFC500D1FE1E /* Frameworks */,
+				18A9003B20D3AFC500D1FE1E /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = rectangle;
+			productName = triangle;
+			productReference = 18A9003F20D3AFC500D1FE1E /* rectangle */;
+			productType = "com.apple.product-type.tool";
+		};
+		18A9005520D3B4DF00D1FE1E /* cube */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 18A9006220D3B4DF00D1FE1E /* Build configuration list for PBXNativeTarget "cube" */;
+			buildPhases = (
+				18A9005620D3B4DF00D1FE1E /* Sources */,
+				18A9005820D3B4DF00D1FE1E /* Frameworks */,
+				18A9006120D3B4DF00D1FE1E /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = cube;
+			productName = triangle;
+			productReference = 18A9006520D3B4DF00D1FE1E /* cube */;
+			productType = "com.apple.product-type.tool";
+		};
+		18A9006720D3B59600D1FE1E /* cube_texture */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 18A9007420D3B59600D1FE1E /* Build configuration list for PBXNativeTarget "cube_texture" */;
+			buildPhases = (
+				18A9006820D3B59600D1FE1E /* Sources */,
+				18A9006A20D3B59600D1FE1E /* Frameworks */,
+				18A9007320D3B59600D1FE1E /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = cube_texture;
+			productName = triangle;
+			productReference = 18A9007720D3B59600D1FE1E /* cube_texture */;
+			productType = "com.apple.product-type.tool";
+		};
 		DFF7959F1F1701D300B7E6EC /* triangle */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = DFF795A41F1701D300B7E6EC /* Build configuration list for PBXNativeTarget "triangle" */;
@@ -778,6 +1125,21 @@
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = "wei shi";
 				TargetAttributes = {
+					18607E7620ECC6D800B83FC6 = {
+						DevelopmentTeam = UML9BQURX9;
+					};
+					18641DE620DE46AB00EF9AB6 = {
+						DevelopmentTeam = UML9BQURX9;
+					};
+					18A9002F20D3AFC500D1FE1E = {
+						DevelopmentTeam = UML9BQURX9;
+					};
+					18A9005520D3B4DF00D1FE1E = {
+						DevelopmentTeam = UML9BQURX9;
+					};
+					18A9006720D3B59600D1FE1E = {
+						DevelopmentTeam = UML9BQURX9;
+					};
 					DFF7959F1F1701D300B7E6EC = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = UML9BQURX9;
@@ -798,11 +1160,58 @@
 			projectRoot = "";
 			targets = (
 				DFF7959F1F1701D300B7E6EC /* triangle */,
+				18A9002F20D3AFC500D1FE1E /* rectangle */,
+				18A9005520D3B4DF00D1FE1E /* cube */,
+				18A9006720D3B59600D1FE1E /* cube_texture */,
+				18641DE620DE46AB00EF9AB6 /* sphere */,
+				18607E7620ECC6D800B83FC6 /* multiObject */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
+		18607E7720ECC6D800B83FC6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18607E8C20ECC79000B83FC6 /* TFGeoObject.cpp in Sources */,
+				18607E8F20ECC9FC00B83FC6 /* TFSphere.cpp in Sources */,
+				18607E8920ECC74700B83FC6 /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18641DE720DE46AB00EF9AB6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18149C4C20DE4862001F014C /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18A9003020D3AFC500D1FE1E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18A9004220D3B08700D1FE1E /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18A9005620D3B4DF00D1FE1E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18A9006620D3B4F000D1FE1E /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18A9006820D3B59600D1FE1E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18A9007A20D3B6B100D1FE1E /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DFF7959C1F1701D300B7E6EC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -814,6 +1223,146 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		18607E8420ECC6D800B83FC6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = UML9BQURX9;
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/common/libs",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		18607E8520ECC6D800B83FC6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = UML9BQURX9;
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/common/libs",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		18641DF420DE46AC00EF9AB6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = UML9BQURX9;
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/common/libs",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		18641DF520DE46AC00EF9AB6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = UML9BQURX9;
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/common/libs",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		18A9003D20D3AFC500D1FE1E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = UML9BQURX9;
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/common/libs",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		18A9003E20D3AFC500D1FE1E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = UML9BQURX9;
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/common/libs",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		18A9006320D3B4DF00D1FE1E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = UML9BQURX9;
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/common/libs",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		18A9006420D3B4DF00D1FE1E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = UML9BQURX9;
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/common/libs",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		18A9007520D3B59600D1FE1E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = UML9BQURX9;
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/common/libs",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		18A9007620D3B59600D1FE1E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = UML9BQURX9;
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/common/libs",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		DFF795971F1701B400B7E6EC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -916,6 +1465,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/common/libs",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -929,6 +1479,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/common/libs",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -936,6 +1487,51 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		18607E8320ECC6D800B83FC6 /* Build configuration list for PBXNativeTarget "multiObject" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18607E8420ECC6D800B83FC6 /* Debug */,
+				18607E8520ECC6D800B83FC6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		18641DF320DE46AC00EF9AB6 /* Build configuration list for PBXNativeTarget "sphere" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18641DF420DE46AC00EF9AB6 /* Debug */,
+				18641DF520DE46AC00EF9AB6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		18A9003C20D3AFC500D1FE1E /* Build configuration list for PBXNativeTarget "rectangle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18A9003D20D3AFC500D1FE1E /* Debug */,
+				18A9003E20D3AFC500D1FE1E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		18A9006220D3B4DF00D1FE1E /* Build configuration list for PBXNativeTarget "cube" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18A9006320D3B4DF00D1FE1E /* Debug */,
+				18A9006420D3B4DF00D1FE1E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		18A9007420D3B59600D1FE1E /* Build configuration list for PBXNativeTarget "cube_texture" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18A9007520D3B59600D1FE1E /* Debug */,
+				18A9007620D3B59600D1FE1E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		DFF7958D1F1701B400B7E6EC /* Build configuration list for PBXProject "OpenGLProjects" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
