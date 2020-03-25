@@ -7,12 +7,13 @@
 //
 
 #define GLEW_STATIC
-#include "glew.h"
-#include "SOIL.h"
-#include "glfw3.h"
+#include <GL/glew.h>
+#include <SOIL/SOIL.h>
+#include <GLFW/glfw3.h>
 
 #include <unistd.h>
 #include <iostream>
+
 
 const GLchar *vertexShaderSource =
 "#version 330 core                          \n\
